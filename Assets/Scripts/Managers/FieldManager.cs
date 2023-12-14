@@ -7,39 +7,30 @@ namespace Managers
 {
     public class FieldManager : Singleton<FieldManager>
     {
-        [Header("Popups"), SerializeField]
-        private GameObject _expandFieldPopup;
+        [Header("Popups"), SerializeField] private GameObject _expandFieldPopup;
 
-        [Header("Field obj"), SerializeField]
-        private Transform _fieldParent;
+        [Header("Field obj"), SerializeField] private Transform _fieldParent;
 
-        [SerializeField]
-        private GameObject _cellPrefab;
+        [SerializeField] private GameObject _cellPrefab;
 
         [Header("Apple Properties"), SerializeField]
         private GameObject _applePrefab;
 
-        [SerializeField]
-        private GameObject _pineapplePrefab;
+        [SerializeField] private GameObject _pineapplePrefab;
 
-        [SerializeField]
-        private GameObject _appleParent;
+        [SerializeField] private GameObject _appleParent;
 
         public static float appleCooldown = 10;
 
-        [SerializeField]
-        private float _appleMax;
+        [SerializeField] private float _appleMax;
 
-        [Header("Properties"), SerializeField]
-        private float _cellSize;
+        [Header("Properties"), SerializeField] private float _cellSize;
 
-        [SerializeField]
-        private int _fieldSize;
+        [SerializeField] private int _fieldSize;
 
         public int FieldSize => _fieldSize;
 
-        [SerializeField]
-        private List<Color> _colors = new();
+        [SerializeField] private List<Color> _colors = new();
 
         private int _currentColor;
 
@@ -62,7 +53,6 @@ namespace Managers
         private Camera _mainCamera;
 
         public static float percentMaxFood = 0.25f;
-
 
 
         private void Start()
@@ -177,7 +167,7 @@ namespace Managers
         public void OnCloseExpandPopup()
         {
             _expandFieldPopup.SetActive(false);
-            ExpandField(_fieldSize+1);
+            ExpandField(_fieldSize + 1);
         }
 
         private void MoveSnakeRandom()
@@ -205,10 +195,10 @@ namespace Managers
                 UIManager.Instance.UpdateFoodValue($"{_appleList.Count}/{Mathf.Floor(_appleMax - 1)}");
                 LevelGrowManager.EatApple(
                     (int)((foundApple.point * LevelGrowManager.baseGrowForFood +
-                            LevelGrowManager.upGrowForFood * _pointForFood) *
-                           (BoostManager.isBoostMetabolism
-                               ? (3 + (_metabolismBoost - 1) * 0.1f)
-                               : 1)), foundApple.fruitID);
+                           LevelGrowManager.upGrowForFood * _pointForFood) *
+                          (BoostManager.isBoostMetabolism
+                              ? (3 + (_metabolismBoost - 1) * 0.1f)
+                              : 1)), foundApple.fruitID);
             }
 
             _cellSnake.Insert(0, nextCell);
@@ -217,6 +207,7 @@ namespace Managers
 
         private void SpawnRandomApple()
         {
+            Debug.Log("SpawnRandomApple");
             if (_appleList.Count >= Mathf.Floor(_appleMax - 1)) return;
             Vector2Int id = new Vector2Int(Random.Range(0, _fieldSize), Random.Range(0, _fieldSize));
             while (_cellSnake.IndexOf(id) != -1 || _appleList.Find(x => x.appleId == id) != null)
