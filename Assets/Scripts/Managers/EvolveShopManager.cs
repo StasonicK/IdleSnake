@@ -35,32 +35,24 @@ namespace Managers
 
         public static EvolveGrades grades;
 
-        [SerializeField]
-        private TextMeshProUGUI _costText;
+        [SerializeField] private TextMeshProUGUI _costText;
 
 
-        [SerializeField]
-        private GameObject _strokeOfMainSkill;
+        [SerializeField] private GameObject _strokeOfMainSkill;
 
-        [SerializeField]
-        private Sprite _lockSprite;
+        [SerializeField] private Sprite _lockSprite;
 
 
-        [SerializeField]
-        private Image _mainSkillImage;
+        [SerializeField] private Image _mainSkillImage;
 
-        [SerializeField]
-        private TextMeshProUGUI _mainSkillDescription;
+        [SerializeField] private TextMeshProUGUI _mainSkillDescription;
 
-        [SerializeField]
-        private TextMeshProUGUI _mainSkillName;
+        [SerializeField] private TextMeshProUGUI _mainSkillName;
 
 
-        [SerializeField]
-        private GameObject _buyButton;
+        [SerializeField] private GameObject _buyButton;
 
-        [SerializeField]
-        private GameObject _lockedBuyText;
+        [SerializeField] private GameObject _lockedBuyText;
 
         private static int chosenSkill;
 
@@ -87,16 +79,17 @@ namespace Managers
                     OpenSkill(node);
                     continue;
                 }
+
                 bool isPrevOpen = node.prev.Any(prev => grades.isOpen[prev]);
                 bool isBlockOpen = node.block.Any(prev => grades.isOpen[prev]);
                 bool isNeedOpen = isPrevOpen && !isBlockOpen;
                 node.lockSkillImage.SetActive(!isNeedOpen);
                 if (isBlockOpen)
                 {
-                    node.lockSkillImage.GetComponent<Image>().color = new Color(0.5f,0.5f,0.5f);
-
+                    node.lockSkillImage.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
                 }
             }
+
             tree[0].lockSkillImage.SetActive(false);
         }
 
@@ -191,7 +184,7 @@ namespace Managers
 
         public void BuyAdrenalineGlands()
         {
-            BoostManager.AdrenalineGlands += 1;
+            BoostManager.AdrenalineGlands = 0;
             FieldManager.Instance.UpgradeBoostSpeed();
         }
 
@@ -214,7 +207,7 @@ namespace Managers
 
         public static void BuyStrongMuscles()
         {
-            UpgradesManager.StrongMuscles += 1;
+            UpgradesManager.StrongMuscles = 0;
             FieldManager.Instance.UpgradeStrongMuscles(UpgradesManager.StrongMuscles);
         }
     }

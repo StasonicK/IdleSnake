@@ -70,10 +70,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10312">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3376">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="10312" />
+      <option name="pid" value="3376" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -90,7 +90,8 @@
       <option name="presentableId" value="Default" />
       <updated>1702522689877</updated>
       <workItem from="1702522692166" duration="12005000" />
-      <workItem from="1702542558565" duration="9489000" />
+      <workItem from="1702542558565" duration="16906000" />
+      <workItem from="1702573984789" duration="1317000" />
     </task>
     <servers />
   </component>
@@ -107,29 +108,81 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
-          <line>113</line>
-          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="113" containingFunctionPresentation="Method 'UpgradeAdrenalineGlands'">
+          <line>123</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="121" containingFunctionPresentation="Method 'UpgradePathfinding'">
             <startOffsets>
-              <option value="5779" />
+              <option value="6208" />
             </startOffsets>
             <endOffsets>
-              <option value="5812" />
+              <option value="6244" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
-          <line>140</line>
-          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="140" containingFunctionPresentation="Method 'UpgradeStrongMuscles'">
+          <line>138</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="136" containingFunctionPresentation="Method 'UpgradeStrongMuscles'">
             <startOffsets>
-              <option value="7096" />
+              <option value="6982" />
             </startOffsets>
             <endOffsets>
-              <option value="7167" />
+              <option value="7018" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
+          <line>153</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="151" containingFunctionPresentation="Method 'UpgradeFastMetabolism'">
+            <startOffsets>
+              <option value="7753" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7789" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
+          <line>51</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="51" containingFunctionPresentation="Method 'Start'">
+            <startOffsets>
+              <option value="2810" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2811" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
+          <line>86</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="87" containingFunctionPresentation="Method 'UpgradeFoodFinding'">
+            <startOffsets>
+              <option value="4409" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4410" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
+          <line>107</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="107" containingFunctionPresentation="Method 'UpgradeAdrenalineGlands'">
+            <startOffsets>
+              <option value="5367" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5441" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

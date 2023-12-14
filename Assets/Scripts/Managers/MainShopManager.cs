@@ -32,12 +32,15 @@ namespace Managers
             _costs[4].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, pathfinding))).ToString();
             _costs[5].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, strongMuscles))).ToString();
             _costs[6].text = ((int)(_startCost * Mathf.Pow(_multiplyCost, fastMetabolism))).ToString();
-            //_currentValue[0].text = greatEyes == 0 ? "0 sec" : (greatEyes == 1) ? (FieldManager.appleCooldown.ToString("f2")+" sec"): $"{FieldManager.appleCooldown - FieldManager.appleCooldown*Mathf.Pow(newFoodPercent, greatEyes-1) :f2} sec";
+            _currentValue[0].text = greatEyes ==
+                                    0 ? "0 sec" :
+                (greatEyes == 1) ? (FieldManager.appleCooldown.ToString("f2") + " sec") :
+                $"{FieldManager.appleCooldown - FieldManager.appleCooldown * Mathf.Pow(newFoodPercent, greatEyes - 1):f2} sec";
             _currentValue[1].text = $"{foodFinding}%";
             _currentValue[2].text = $"{1 + steelStomach}";
-            _currentValue[3].text = $"{100 + 10 * adrenalineGlands}%";
+            _currentValue[3].text = $"{10 * adrenalineGlands}%";
             _currentValue[4].text = $"{6 + pathfinding}x{6 + pathfinding}";
-            _currentValue[5].text = $"{1 + 0.1 * strongMuscles}";
+            _currentValue[5].text = $"{0.1 * strongMuscles}";
             _currentValue[6].text = $"{300 + 10 * (fastMetabolism)}%";
             _level[0].text = greatEyes.ToString() + " lvl";
             _level[1].text = foodFinding.ToString() + " lvl";
@@ -50,8 +53,7 @@ namespace Managers
 
         public void BuyGreatEyes()
         {
-            _currentValue[0].text =
-                FieldManager.appleCooldown.ToString();
+            _currentValue[0].text = FieldManager.appleCooldown.ToString("f2") + " sec";
         }
 
         public void UpgradeGreatEyes()
@@ -109,7 +111,7 @@ namespace Managers
             BoostManager.AdrenalineGlands = adrenalineGlands + 1;
             UIManager.Instance.UpdateCoinValue();
             cost = (int)(_startCost * Mathf.Pow(_multiplyCost, adrenalineGlands + 1));
-            _currentValue[3].text = $"{100 + 10 * (adrenalineGlands + 1)}%";
+            _currentValue[3].text = $"{10 * (adrenalineGlands + 1)}%";
             _costs[3].text = cost.ToString();
             _level[3].text = (adrenalineGlands + 1).ToString() + " lvl";
             FieldManager.Instance.UpgradeBoostSpeed();
@@ -138,7 +140,7 @@ namespace Managers
             UpgradesManager.AllCoins -= cost;
             UpgradesManager.StrongMuscles = strongMuscles + 1;
             cost = (int)(_startCost * Mathf.Pow(_multiplyCost, strongMuscles + 1));
-            _currentValue[5].text = $"{1 + 0.1 * (strongMuscles)}";
+            _currentValue[5].text = $"{0.1 * (strongMuscles + 1)}";
             _costs[5].text = cost.ToString();
             _level[5].text = (strongMuscles + 1).ToString() + " lvl";
             UIManager.Instance.UpdateCoinValue();
