@@ -114,9 +114,9 @@ namespace Managers
             {
                 Transform nextSegment = (i == 0) ? _head : Segments[i - 1].segmentTransform;
                 Transform prevSegment = (i == Segments.Count - 1) ? null : Segments[i + 1].segmentTransform;
-                var position = nextSegment.position;
+                var nextSegmentPosition = nextSegment.position;
                 //Vector2 direction = (position - Segments[i].segmentTransform.position).normalized;
-                Segments[i].segmentTransform.LookAt2D(position);
+                Segments[i].segmentTransform.LookAt2D(nextSegmentPosition);
                 Segments[i].segmentTransform.gameObject.name = "Segment" + (i + 1);
                 if (prevSegment != null)
                 {
@@ -136,6 +136,81 @@ namespace Managers
         }
 
      
+
+        // public void UpdateSnakeSprites(Vector2 target)
+        // {
+        //     _head.LookAt2D(target);
+        //     for (int i = 0; i < Segments.Count; i++)
+        //     {
+        //         Transform nextSegment = (i == 0) ? _head : Segments[i - 1].segmentTransform;
+        //         Transform prevSegment = (i == Segments.Count - 1) ? null : Segments[i + 1].segmentTransform;
+        //         var position = nextSegment.position;
+        //         Vector2 direction = (position - Segments[i].segmentTransform.position).normalized;
+        //         Segments[i].segmentTransform.LookAt2D(position);
+        //         Segments[i].segmentTransform.gameObject.name = "Segment" + (i + 1);
+        //         Debug.Log($"name: {Segments[i].segmentTransform.gameObject.name}");
+        //         Debug.Log($"direction: {direction}");
+        //
+        //         if (prevSegment != null)
+        //         {
+        //             Vector2 offset = nextSegment.position - prevSegment.position;
+        //             Debug.Log($"offset: {offset}");
+        //
+        //             Segments[i].segmentSprite.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        //             Debug.Log($"rotation before: {Segments[i].segmentSprite.gameObject.transform.rotation}");
+        //
+        //             if (offset.x == 0 || offset.y == 0)
+        //             {
+        //                 Segments[i].segmentSprite.sprite = _straightSprite;
+        //
+        //                 if (offset.x == 0)
+        //                 {
+        //                 }
+        //                 else
+        //                 {
+        //                     Segments[i].segmentSprite.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+        //                 }
+        //             }
+        //             else
+        //             {
+        //                 Segments[i].segmentSprite.sprite = _swivelSprite;
+        //
+        //                 if (offset.x < 0)
+        //                 {
+        //                     if (offset.y < 0)
+        //                         Segments[i].segmentSprite.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+        //                     // Segments[i].segmentSprite.gameObject.transform.Rotate(0f, 0f, 90f);
+        //                     else if (offset.y > 0)
+        //                         Segments[i].segmentSprite.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        //                     // Segments[i].segmentSprite.gameObject.transform.Rotate(0f, 0f, 0f);
+        //                 }
+        //                 else if (offset.x > 0)
+        //                 {
+        //                     if (offset.y < 0)
+        //                         Segments[i].segmentSprite.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        //                     // Segments[i].segmentSprite.gameObject.transform.Rotate(0f, 0f, 270f);
+        //                     else if (offset.y > 0)
+        //                         Segments[i].segmentSprite.gameObject.transform.rotation =
+        //                             Quaternion.Euler(0f, 0f, 90f);
+        //                     // Segments[i].segmentSprite.gameObject.transform.Rotate(0f, 0f, 270f);
+        //                 }
+        //             }
+        //
+        //             // if (!(offset.x == 0 || offset.y == 0))
+        //             //     {
+        //             // Segments[i].segmentSprite.flipX =
+        //             //     ((Segments[i].segmentTransform.position +
+        //             //           Segments[i].segmentTransform.right * _segmentWidth - prevSegment.position).magnitude <
+        //             //       0.01f);
+        //             // }
+        //
+        //
+        //             Debug.Log($"rotation after: {Segments[i].segmentSprite.gameObject.transform.rotation}");
+        //             // Debug.Log($"flipX: {Segments[i].segmentSprite.flipX}");
+        //         }
+        //         else Segments[i].segmentSprite.sprite = _endSprite;
+        //     }
+        // }
 
         public void AddSegment()
         {

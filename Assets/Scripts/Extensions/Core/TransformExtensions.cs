@@ -13,7 +13,8 @@ namespace Extensions.Core
         /// <param name="final"></param>
         /// <param name="duration"></param>
         /// <returns></returns>
-        public static IEnumerator SetPositionWithLerp(this Transform transform, Vector3 initial, Vector3 final, float duration)
+        public static IEnumerator SetPositionWithLerp(this Transform transform, Vector3 initial, Vector3 final,
+            float duration)
         {
             float percentage = 0;
             float timeElapsed = 0;
@@ -34,7 +35,8 @@ namespace Extensions.Core
         /// <param name="finalScale"></param>
         /// <param name="duration"></param>
         /// <returns></returns>
-        public static IEnumerator ScaleWithLerp(this Transform transform ,Vector3 initialScale, Vector3 finalScale, float duration)
+        public static IEnumerator ScaleWithLerp(this Transform transform, Vector3 initialScale, Vector3 finalScale,
+            float duration)
         {
             float timeElapsed = 0;
             float percentage = 0;
@@ -56,7 +58,8 @@ namespace Extensions.Core
         /// <param name="finalRotation"></param>
         /// <param name="duration"></param>
         /// <returns></returns>
-        public static IEnumerator RotateWithLerp(this Transform transform, float initialRotation, float finalRotation, float duration)
+        public static IEnumerator RotateWithLerp(this Transform transform, float initialRotation, float finalRotation,
+            float duration)
         {
             float timeElapsed = 0;
             float percentage = 0;
@@ -64,12 +67,14 @@ namespace Extensions.Core
             {
                 timeElapsed += Time.deltaTime;
                 percentage = timeElapsed / duration;
-                transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, 0, initialRotation), Quaternion.Euler(0, 0, finalRotation), percentage);
+                transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, 0, initialRotation),
+                    Quaternion.Euler(0, 0, finalRotation), percentage);
                 yield return null;
             }
         }
 
-        public static IEnumerator SetPositionWithLerpRect(this RectTransform transform, Vector3 initial, Vector3 final, float duration)
+        public static IEnumerator SetPositionWithLerpRect(this RectTransform transform, Vector3 initial, Vector3 final,
+            float duration)
         {
             float percentage = 0;
             float timeElapsed = 0;
@@ -81,7 +86,9 @@ namespace Extensions.Core
                 yield return null;
             }
         }
-        public static IEnumerator SetWidthHeighWithLerpRect(this RectTransform transform, Vector2 initial, Vector2 final, float duration)
+
+        public static IEnumerator SetWidthHeighWithLerpRect(this RectTransform transform, Vector2 initial,
+            Vector2 final, float duration)
         {
             float percentage = 0;
             float timeElapsed = 0;

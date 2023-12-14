@@ -76,7 +76,6 @@ namespace Managers
             if (UpgradesManager.AllCoins < cost) return;
             UpgradesManager.AllCoins -= cost;
             UpgradesManager.FoodFinding = 1 + foodFinding;
-
             cost = (int)(_startCost * Mathf.Pow(_multiplyCost, foodFinding + 1));
             _currentValue[1].text = $"{1 + foodFinding}%";
             _costs[1].text = cost.ToString();

@@ -169,14 +169,14 @@ namespace Managers
 
         public static void BuyGreatEyes()
         {
-            UpgradesManager.GreatEyes = 1;
+            UpgradesManager.GreatEyes = 0;
             MainShopManager.Instance.BuyGreatEyes();
             QuestManager.Instance.AddValueToQuest(QuestManager.Quest.QuestType.Unlock_Great_Eyes, 1);
         }
 
         public static void BuyFoodFinding()
         {
-            UpgradesManager.FoodFinding = 1;
+            UpgradesManager.FoodFinding = 0;
             FieldManager.Instance.UpgradeFoodFinding();
             QuestManager.Instance.AddValueToQuest(QuestManager.Quest.QuestType.Unlock_Food_Finding, 1);
         }
@@ -184,7 +184,7 @@ namespace Managers
 
         public static void BuySteelStomach()
         {
-            UpgradesManager.SteelStomach = 1;
+            UpgradesManager.SteelStomach = 0;
             FieldManager.Instance.UpgradeSteelStomach();
         }
 
