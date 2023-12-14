@@ -205,7 +205,7 @@ namespace Managers
             _cellSnake.RemoveAt(_cellSnake.Count - 1);
         }
 
-        private void SpawnRandomApple()
+        public void SpawnRandomApple()
         {
             Debug.Log("SpawnRandomApple");
             if (_appleList.Count >= Mathf.Floor(_appleMax - 1)) return;
