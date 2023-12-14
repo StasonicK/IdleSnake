@@ -84,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702522689877</updated>
-      <workItem from="1702522692166" duration="4154000" />
+      <workItem from="1702522692166" duration="6162000" />
     </task>
     <servers />
   </component>
@@ -100,30 +100,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/FieldManager.cs</url>
-          <line>230</line>
-          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\FieldManager.cs" initialLine="230" containingFunctionPresentation="Method 'SpawnApple'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
+          <line>60</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="60" containingFunctionPresentation="Method 'UpgradeGreatEyes'">
             <startOffsets>
-              <option value="9171" />
+              <option value="3102" />
             </startOffsets>
             <endOffsets>
-              <option value="9172" />
+              <option value="3138" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/FieldManager.cs</url>
-          <line>61</line>
-          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\FieldManager.cs" initialLine="61" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="1559" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1584" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
