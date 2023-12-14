@@ -44,7 +44,6 @@ namespace Managers
 
         public void HideHand()
         {
-            Debug.Log("HideHand");
             if (_isHandShow) return;
             _isHandShow = true;
             _isHandShowPrefs = _isHandShow;
