@@ -84,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702522689877</updated>
-      <workItem from="1702522692166" duration="6162000" />
+      <workItem from="1702522692166" duration="9049000" />
     </task>
     <servers />
   </component>
@@ -101,16 +101,42 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
-          <line>60</line>
-          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="60" containingFunctionPresentation="Method 'UpgradeGreatEyes'">
+          <line>113</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="113" containingFunctionPresentation="Method 'UpgradeAdrenalineGlands'">
             <startOffsets>
-              <option value="3102" />
+              <option value="5781" />
             </startOffsets>
             <endOffsets>
-              <option value="3138" />
+              <option value="5814" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
+          <line>140</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="140" containingFunctionPresentation="Method 'UpgradeStrongMuscles'">
+            <startOffsets>
+              <option value="7098" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7169" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/MainShopManager.cs</url>
+          <line>40</line>
+          <properties documentPath="E:\Unity projects\My projects\IdleSnakeTest-Bugs\Assets\Scripts\Managers\MainShopManager.cs" initialLine="40" containingFunctionPresentation="Method 'Start'">
+            <startOffsets>
+              <option value="2240" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2298" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

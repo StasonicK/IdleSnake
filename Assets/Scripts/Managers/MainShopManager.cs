@@ -35,9 +35,9 @@ namespace Managers
             //_currentValue[0].text = greatEyes == 0 ? "0 sec" : (greatEyes == 1) ? (FieldManager.appleCooldown.ToString("f2")+" sec"): $"{FieldManager.appleCooldown - FieldManager.appleCooldown*Mathf.Pow(newFoodPercent, greatEyes-1) :f2} sec";
             _currentValue[1].text = $"{foodFinding}%";
             _currentValue[2].text = $"{1 + steelStomach}";
-            _currentValue[3].text = $"{100 + 10 * (adrenalineGlands)}%";
+            _currentValue[3].text = $"{100 + 10 * adrenalineGlands}%";
             _currentValue[4].text = $"{6 + pathfinding}x{6 + pathfinding}";
-            _currentValue[5].text = $"{1 + 0.1 * (strongMuscles - 1)}";
+            _currentValue[5].text = $"{1 + 0.1 * strongMuscles}";
             _currentValue[6].text = $"{300 + 10 * (fastMetabolism)}%";
             _level[0].text = greatEyes.ToString() + " lvl";
             _level[1].text = foodFinding.ToString() + " lvl";
